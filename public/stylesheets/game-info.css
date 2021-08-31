@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.body-content {
+  position: relative;
+  top: 30px;
+}
+
+.game-info-container{
+  width: 800px;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: flex;
+  background-color: #f3f3f3;
+  font-family: 'Merriweather', serif;
+  border-radius: 5px;
+  position: relative;
+}
+
+.img-div {
+  width: 200px;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info-description{
+  font-size: 14px;
+}
+
+.gameImage-info {
+  width: 100%;
+}
+
+.game-shelf-dropdown {
+  margin-top: 5px;
+  max-width: 149px;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.game-shelf-dropdown:focus {
+  outline: none;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 10px;
+}
+
+.header-and-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.releaseDate{
+  font-size: 12px;
+}
+.developer{
+  font-size: 12px;
+}
+.rating{
+  font-size: 12px;
+}
+
+.played-status {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.played-status-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.played-status-list > li {
+  list-style-type: none;
+  background: lightgreen;
+  border-radius: 15px;
+  padding: 7px;
+  margin-bottom: 3px;
+  width:fit-content;
+}
+
+.game-info-header {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.played-status {
+  width: 200px;
+}
+
+.success-message {
+  width: fit-content;
+  padding: 8px 10px;
+  position: absolute;
+  left: 350px;
+  bottom: -30px;
+  border-radius: 15px;
+  opacity: 1;
+  list-style-type: none;
+  background-color: rgba(255, 166, 0, 0.637);
+}
+
+.review-form{
+  display: flex;
+  justify-content:flex-end;
+}
+
+.review-button-redirect{
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 105, 51);
+  width:20%;
+  height: 40px;
+  color:white;
+  font-size: 1rem;
+}
+
+.review-button-redirect:hover {
+  cursor: pointer;
+}
+
+.add-to-game-shelf-button{
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 105, 51);
+  color:white;
+  font-size: 1rem;
+  margin-top: 5px;
+  padding: 3px 0;
+}
+
+.add-to-game-shelf-button:hover {
+  cursor: pointer;
+}
+
+/* Review Section */
+
+.review-container {
+  width: 800px;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: flex;
+  background-color: #f3f3f3;
+  font-family: 'Merriweather', serif;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px;
+}
+
+.reviews-title {
+  font-size: large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.review-table {
+  width: 780px;
+  padding-top: 20px;
+}
+
+
+.review-userId {
+  width: 200px;
+  font-weight: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.review-content {
+  width: 600px;
+  text-align: left;
+  font-weight: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.review-rating {
+  width: 200px;
+  font-weight: normal;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* User Review */
+.user-review-container {
+  width: 800px;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  font-family: 'Merriweather', serif;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  width: 780px;
+}
+
+.user-reviews-title {
+  width: 450px;
+  font-size: large;
+  font-weight: bolder;
+  text-align: right;
+}
+
+button > .edit-review-button {
+  padding-left: 50px;
+}
+
+.edit-review-button, .delete-review-button {
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 105, 51);
+  width: 100px;
+  height: 20px;
+  color:white;
+  text-align: center;
+  font-size: 15px;
+}
+
+.edit-review-button:hover,
+.delete-review-button:hover {
+  cursor: pointer;
+}
+
+form.edit-review-button, form.delete-review-button {
+  margin: 5px;
+  margin-left: 110px;
+}
+
+form.delete-review-button {
+  margin: 5px;
+  margin-left: 10px;
+}
+
+
+.user-review-table {
+  width: 780px;
+  padding-top: 20px;
+}

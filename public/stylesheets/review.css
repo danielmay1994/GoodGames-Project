@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.body-content {
+  position: relative;
+  top: 30px;
+}
+
+.review-container {
+  width: 750px;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f3f3f3;
+  font-family: "Merriweather", serif;
+  border-radius: 5px;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.review-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.img-div {
+  width: 200px;
+  height: fit-content;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-img {
+  width: 100%;
+}
+
+.game-content {
+  /* border: solid blue; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+.game-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.releaseDate,
+.developer {
+  color: rgb(92, 92, 92)
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-field {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-welcome {
+  font-weight: bold;
+  display: flex;
+  align-content: flex-end;
+}
+
+
+.review-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  resize: none;
+  width: 100%;
+  height: 100px;
+}
+
+.review-submit {
+  border-radius: 28px;
+  border: none;
+  background-color: rgb(255, 105, 51);
+  width: 50%;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* https://codepen.io/hesguru/pen/BaybqXv */
+
+.rate {
+    float: left;
+    height: 60px;
+    padding: 0 10px;
+    padding-top: 10px;
+    padding-left: 150px;
+    font-size: 20px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+
+#return-link {
+  position: relative;
+  bottom: 20px;
+  font-size: 14px;
+}

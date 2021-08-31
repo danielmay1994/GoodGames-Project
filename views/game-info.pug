@@ -1,0 +1,13 @@
+extends layout
+append head
+  link(rel="stylesheet" href="/stylesheets/game-info.css")
+  if authenticated
+    script(src="/javascripts/gameshelf-button.js")
+
+block content
+  include game-card.pug
+  if userReview
+    include user-review-card 
+  include reviews-card.pug
+
+

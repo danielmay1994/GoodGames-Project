@@ -1,0 +1,29 @@
+extends layout
+
+append head
+  script(src="/javascripts/index.js" type="module" defer)
+  link(rel="stylesheet" href="/stylesheets/game-info.css")
+  link(rel="stylesheet" href="/stylesheets/home.css")
+
+block content
+  div(class="index-body-container")
+    div(class="index-left-container")
+      h2(class="index-header") CURRENTLY PLAYING
+      if !currGameId
+        div You're currently not playing anything.
+      div(class="index-currently-playing")
+      if currGameId
+        a(href=href=`games/${currGameId}`): img(class="currImage-tag" src=currImgURL)
+    div(class="index-middle-container")
+      div(class="reccommendations")
+        h2(class="index-header") RECOMMENDED FOR YOU
+        include game-small-card.pug
+    div(class="index-right-container")
+      div(class="index-reviews")
+        h2(class="index-header") Find out what people are saying
+        div(class="reviews-div-container")
+          div(class="index-review-name") #{reviewWithUser.User.username} recently played #{reviewWithGame.Game.name}
+          img(class="index-review-image" src=reviewWithGame.Game.imgURL)
+          div(class="index-review-rating") #{reviewWithUser.User.username}'s Rating: #{reviewWithUser.rating}/5
+          p(class="index-review-content") #{reviewWithUser.User.username}'s Review:
+          p(class="index-review-content") #{reviewWithUser.content}

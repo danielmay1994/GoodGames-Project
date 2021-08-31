@@ -1,0 +1,28 @@
+extends layout.pug
+append head
+  link(rel="stylesheet", href="/stylesheets/login-signup.css")
+  link(rel="stylesheet" href="/stylesheets/error-styling.css")
+
+block content
+  if authenticated
+    div Already logged in.
+  else
+    div(class="login-container")
+      form(action="/login" method="post" class="login-form")
+        if errors
+          div(role='alert' class="error-container")
+            p(class="error-header") There's an error with your login:
+            ul(class="error-list")
+              each error in errors
+                li(class="error-li")= error
+        h2(class="login-item login-header") Sign In to Goodgames
+        input(type="hidden" name="_csrf" value=csrfToken)
+        label(class="login-item login-label" for="username") Username
+        input(class="login-item" type="text" name="username" value=user.username)
+        label(class="login-item login-label" for="password") Password
+        input(class="login-item" type="password" name="password")
+        button(class="login-item login-button") Sign in
+        span(class="login-item login-label") Not a Member?
+          a(class="login-item" href="/signup") Sign up
+          form(action="/guest" method="post")
+            button(formaction="/guest" class="login-label login-item guest-button") Continue as guest

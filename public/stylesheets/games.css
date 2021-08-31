@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.body-content {
+  position: relative;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-container{
+  border-bottom: solid 2px #a3a2ad;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.game-info-container{
+  width: 700px;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: flex;
+  background-color: #ffffff;
+  font-family: 'Merriweather', serif;
+  border-radius: 5px;
+  transition: box-shadow .3s;
+}
+
+.game-info-container:hover{
+  box-shadow: 0 0 11px rgba(33, 33, 33, .6);
+}
+
+.img-div {
+  width: 200px;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameImage-info {
+  width: 100%;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 10px;
+}
+
+.game-info-header {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.releaseDate,
+.developer {
+  color: rgb(92, 92, 92)
+}
+
+.gameshelf-games-container {
+  width: auto;
+}

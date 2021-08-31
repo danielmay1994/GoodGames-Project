@@ -1,0 +1,28 @@
+div(class="game-info-container")
+  div(class="img-div")
+    img(class='gameImage-info' src= game.imgURL)
+    if gameshelves
+      select(class='game-shelf-dropdown')
+        option(value="" disabled selected class="select-placeholder") Select shelf:
+        each shelf in gameshelves
+          option(data-id=shelf.id data-gameid=game.id value=shelf.name) #{shelf.name}
+      button(class='add-to-game-shelf-button') Add
+  div(class="game-content")
+    div(class="header-and-status")
+      div(class="game-header")
+        h2(class='game-info-header') #{game.name}
+        span(class='releaseDate') Release Date: #{game.releaseDate.toLocaleDateString()}
+        span(class='developer') By #{game.developer}
+        if game.rating === null 
+          div(class="rating") Rating: Unrated 
+        else
+          div(class="rating") Rating: #{game.rating}/5
+      div(class="played-status")
+        ul(class="played-status-list")
+          if authenticated
+            each shelf in ownedShelves
+              li= shelf
+    p(class='game-info-description') #{game.description}
+    if authenticated
+      form(action=`/games/${game.id}/reviews/new` method='get' class='review-form')
+        button(class="review-button-redirect") Add Review

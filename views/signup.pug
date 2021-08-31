@@ -1,0 +1,31 @@
+extends layout.pug
+
+append head
+  link(rel="stylesheet", href="/stylesheets/login-signup.css")
+  link(rel="stylesheet" href="/stylesheets/error-styling.css")
+
+block content
+  if authenticated
+    div Already signed up.
+  else
+    div(class="signup-container")
+      form(action="/signup" method="post" class="signup-form")
+        if errors
+          div(role='alert' class="error-container")
+            p(class="error-header") There's an error with your sign up:
+            ul(class="error-list")
+              each error in errors
+                li(class="error-li")= error
+        h2(class="signup-item signup-header") Sign Up for Goodgames
+        input(type="hidden" name="_csrf" value=csrfToken)
+        label(class="signup-item signup-label" for="username") Username
+        input(class="signup-item" type="text" name="username" value=user.username)
+        label(class="signup-item signup-label" for="firstName") First Name
+        input(class="signup-item" type="text" name="firstName" value=user.firstName)
+        label(class="signup-item signup-label" for="lastName") Last Name
+        input(class="signup-item" type="text" name="lastName" value=user.lastName)
+        label(class="signup-item signup-label" for="password") Password
+        input(class="signup-item" type="password" name="password")
+        button(class="signup-item signup-button") Sign Up
+        span(class="signup-item signup-label") Already a Member?
+          a(class="signup-item" href="/login") Sign in

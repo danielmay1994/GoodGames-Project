@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+      block head
+        title="Goodgames"
+        link(rel='stylesheet' href='/stylesheets/reset.css')
+        link(rel="stylesheet" href="/stylesheets/index.css")
+        link(rel="icon", href="/tab-icon.png")
+  body
+    div.nav-container
+      div.content-container
+        a(href="/"): div.logo-container
+        div.search-container
+          form(action="/search" method="post" class="search-form")
+            input(type="search" name="search" placeholder="Search games" class="search-bar")
+            button.search-icon
+        div.nav-link-container
+          if authenticated
+            a(href="/gameshelves" class="nav-link") Gameshelves
+          a(href="/games" class="nav-link") Games
+        div.user-container
+          if authenticated
+            div(class="user-link" id="welcome-message") Welcome, #{user.firstName}
+            h1(class="user-link divider") |
+            form(action="/logout" method="post")
+              button(class="user-link logout") Log Out
+          else
+            a(href="/login" class="user-link") Login
+            h1(class="user-link divider") |
+            a(href="/signup" class="user-link") Register
+
+    div.body-content
+      block content
+    div.footer-container
+      div.github-logo
+      a(href="https://github.com/jcahela" target="_blank" class="github-link" style="color:black") Jason
+      a(href="https://github.com/langston7" target="_blank" class="github-link" style="color:black") Eric
+      a(href="https://github.com/danielmay1994" target="_blank" class="github-link" style="color:black") Daniel
+      a(href="https://github.com/Lee6413" target="_blank" class="github-link" style="color:black") Lee

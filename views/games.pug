@@ -1,0 +1,9 @@
+extends layout
+
+append head
+    link(rel="stylesheet" href="/stylesheets/games.css")
+
+block content
+    each game in games
+        div(class="card-container")
+            include game-small-card.pug

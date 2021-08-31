@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Ramabhadra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color:#dbdce0;
+}
+
+.body-content {
+    max-width: 1220px;
+    margin: 0 auto;
+    font-family: 'Ramabhadra', sans-serif;
+}
+
+a:not(.nav-container a){
+    text-decoration: none;
+    color: #00635D;
+}
+
+.logo-container {
+    background-image: url('../images/logo.png');
+    width: 297px;
+    height: 65px;
+}
+
+.nav-container {
+    height: 75px;
+    width: 100%;
+    background-color: #7D8CA3;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.footer-container {
+    background-color: #7D8CA3;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-logo {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/GitHub-Mark-32px.png');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.github-link,
+.dev-link,
+.creators {
+    margin: 0 10px;
+    color: black;
+}
+
+.content-container {
+    max-width: 1220px;
+    height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-container {
+    width: 388px;
+    height: 32px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.search-bar {
+    height: 22px;
+    border: none;
+    border-width: 0;
+    margin-left: 5px;
+    width: 80%;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-bar::placeholder {
+    font-family: 'Ramabhadra', sans-serif;
+    font-size: 14px;
+}
+
+.search-icon {
+    background-image: url('../images/icons8-search-24.png');
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background-color: white;
+}
+
+.search-header{
+    color:black;
+    margin: 0 auto;
+    padding-right: 400px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link-container {
+    width: fit-content;
+    margin-left: 20px;
+}
+
+.nav-link {
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: background-color .3s;
+}
+
+.nav-link:hover:not(#welcome-message){
+    background-color: whitesmoke;
+}
+
+.user-container {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.user-link {
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: background-color .3s;
+}
+
+.user-link:hover:not(#welcome-message, .divider){
+    background-color: whitesmoke;
+}
+
+.divider {
+    font-size: 40px;
+    color: #3e4046;
+    margin-left: 5px;
+}
+
+.logout {
+    border: none;
+    background-color: #7D8CA3;
+}
+
+.logout:hover {
+    cursor: pointer;
+}

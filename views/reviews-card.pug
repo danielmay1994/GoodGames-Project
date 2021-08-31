@@ -1,0 +1,13 @@
+div(class="review-container")
+  div(class="header")
+    h2(class="reviews-title") Reviews
+    table(class="review-table")
+      tr
+        th Username
+        th Comment
+        th Rating
+      each review in reviews
+        tr(class="review-comment")
+          th(class="review-userId") #{review.User.username}
+          th(class="review-content") #{review.content}
+          th(class="review-rating") #{review.rating}
